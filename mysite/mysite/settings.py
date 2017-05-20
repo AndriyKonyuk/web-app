@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pr6w$qj_8hv+w-sod#%##25_&ukxtdem2_u=z8q^v$mxt#2f7k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['127.0.0.1']
+DEBUG = True
+#
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -127,7 +127,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), 'static',]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',
+        'rest_framework.permissions.DjangoModelPermissions',
     ],
     'PAGE_SIZE': 10
 }
