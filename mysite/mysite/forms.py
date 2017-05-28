@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django import forms
 
 
-
 class AuthenticateForm(AuthenticationForm):
     username = forms.CharField(label='User names',
                                widget=forms.widgets.TextInput(attrs={'id': 'inputUser', 'class': 'form-control',
